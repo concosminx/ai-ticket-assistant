@@ -1,0 +1,170 @@
+[
+  {
+    "code": 1001,
+    "creationDate": "2025-08-21T10:30:00",
+    "severity": "RIDICATA",
+    "summary": "Eroare la autentificare utilizatori",
+    "description": "Utilizatorii nu se pot autentifica in aplicatia mobila. Apare un mesaj de eroare necunoscut.",
+    "status": "In Executie",
+    "internalBudget": 1500.5,
+    "externalBudget": 3000.0,
+    "module": "AuthService",
+    "partnerCode": "P001",
+    "partnerName": "TechPartners SRL",
+    "reporter": "Ion Popescu",
+    "screener": "Maria Ionescu",
+    "assignedUser": "Andrei Georgescu",
+    "attachmentList": [
+      {
+        "filename": "error_screenshot.png",
+        "fileSize": 2048
+      },
+      {
+        "filename": "logs.txt",
+        "fileSize": 4096
+      }
+    ],
+    "commentList": [
+      {
+        "order": 1,
+        "type": "Intern",
+        "author": "Maria Ionescu",
+        "content": "Incident confirmat, verific loguri.",
+        "date": "2025-08-21T11:00:00"
+      },
+      {
+        "order": 2,
+        "type": "Extern",
+        "author": "Ion Popescu",
+        "content": "Asteptam rezolvare cat mai urgent.",
+        "date": "2025-08-21T11:15:00"
+      }
+    ]
+  },
+  {
+    "code": 1002,
+    "creationDate": "2025-08-20T16:45:00",
+    "severity": "MEDIE",
+    "summary": "Performanta scazuta in modulul de raportare",
+    "description": "Rapoartele se genereaza foarte lent peste 2 minute.",
+    "status": "Spre Validare",
+    "internalBudget": 800.0,
+    "externalBudget": 1200.75,
+    "module": "ReportingEngine",
+    "partnerCode": "P002",
+    "partnerName": "DataSolutions SA",
+    "reporter": "Elena Tudor",
+    "screener": "Mihai Enache",
+    "assignedUser": "Cristina Vasilescu",
+    "attachmentList": [
+      {
+        "filename": "report_delay.mp4",
+        "fileSize": 1048576
+      }
+    ],
+    "commentList": [
+      {
+        "order": 1,
+        "type": "Intern",
+        "author": "Mihai Enache",
+        "content": "Am optimizat query-urile, asteptam validare.",
+        "date": "2025-08-21T09:30:00"
+      }
+    ]
+  },
+  {
+    "code": 1003,
+    "creationDate": "2025-08-19T14:20:00",
+    "severity": "SCAZUTA",
+    "summary": "Mesaj de avertizare incorect",
+    "description": "La salvarea unui document apare un mesaj de avertizare gresit, dar salvarea se face corect.",
+    "status": "Nealocat",
+    "internalBudget": 200.0,
+    "externalBudget": 0.0,
+    "module": "DocumentService",
+    "partnerCode": "P003",
+    "partnerName": "SoftVision SRL",
+    "reporter": "George Marin",
+    "screener": "Ioana Stan",
+    "assignedUser": "",
+    "attachmentList": [],
+    "commentList": [
+      {
+        "order": 1,
+        "type": "Extern",
+        "author": "George Marin",
+        "content": "Problema minora, dar deranjanta pentru utilizatori.",
+        "date": "2025-08-19T14:30:00"
+      }
+    ]
+  },
+  {
+    "code": 1004,
+    "creationDate": "2025-08-18T09:10:00",
+    "severity": "CRITICA",
+    "summary": "Serviciul de plati nu functioneaza",
+    "description": "Platile online sunt blocate pentru toti utilizatorii. Eroare la conectarea cu banca partenera.",
+    "status": "Aprobare Executie",
+    "internalBudget": 5000.0,
+    "externalBudget": 7500.0,
+    "module": "PaymentGateway",
+    "partnerCode": "P004",
+    "partnerName": "PayNet SA",
+    "reporter": "Laura Dobre",
+    "screener": "Alexandru Pavel",
+    "assignedUser": "Daniel Radu",
+    "attachmentList": [
+      {
+        "filename": "payment_error.log",
+        "fileSize": 8192
+      }
+    ],
+    "commentList": [
+      {
+        "order": 1,
+        "type": "Intern",
+        "author": "Alexandru Pavel",
+        "content": "Incident critic, nevoie de aprobare pentru interventie imediata.",
+        "date": "2025-08-18T09:30:00"
+      },
+      {
+        "order": 2,
+        "type": "Extern",
+        "author": "Laura Dobre",
+        "content": "Situatie blocanta pentru clienti.",
+        "date": "2025-08-18T10:00:00"
+      }
+    ]
+  },
+  {
+    "code": 1005,
+    "creationDate": "2025-08-17T08:00:00",
+    "severity": "RIDICATA",
+    "summary": "Consum mare de memorie pe server",
+    "description": "Procesul principal al aplicatiei consuma resurse excesive de memorie, afectand performanta generala.",
+    "status": "In Executie",
+    "internalBudget": 1200.0,
+    "externalBudget": 2500.0,
+    "module": "CoreService",
+    "partnerCode": "P005",
+    "partnerName": "InfraTech SRL",
+    "reporter": "Paul Iliescu",
+    "screener": "Carmen Balan",
+    "assignedUser": "Victor Matei",
+    "attachmentList": [
+      {
+        "filename": "memory_profile.json",
+        "fileSize": 16384
+      }
+    ],
+    "commentList": [
+      {
+        "order": 1,
+        "type": "Intern",
+        "author": "Carmen Balan",
+        "content": "Investigam posibile memory leaks.",
+        "date": "2025-08-17T08:30:00"
+      }
+    ]
+  }
+]
