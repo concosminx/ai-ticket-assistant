@@ -1,0 +1,25 @@
+services:
+  pgvector:
+    image: 'pgvector/pgvector:pg17'
+    restart: unless-stopped
+    container_name: pgvector_container
+    environment:
+      - 'POSTGRES_DB=rag'
+      - 'POSTGRES_PASSWORD=password'
+      - 'POSTGRES_USER=user'
+    ports:
+      - '5432:5432'
+
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4_container
+    restart: unless-stopped
+    ports:
+      - '5016:80'
+    #user: "$UID:$GID"
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=demo@demo.com
+      - PGADMIN_DEFAULT_PASSWORD=password
+#    volumes:
+#      - ./pgadmin-data:/var/lib/pgadmin
