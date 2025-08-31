@@ -1,0 +1,170 @@
+[
+  {
+    "code": 1001,
+    "creationDate": "2025-08-21T10:30:00",
+    "severity": "RIDICATA",
+    "summary": "Eroare la autentificare utilizatori",
+    "description": "Utilizatorii nu se pot autentifica in aplicatia mobila. In momentul introducerii credentialelor corecte, apare un mesaj generic de eroare care nu ofera detalii suplimentare. Problema a fost raportata de mai multi clienti din regiuni diferite, ceea ce sugereaza ca este o problema la nivel de sistem si nu doar una izolata. Impactul asupra business-ului este ridicat deoarece impiedica accesul la functionalitatile de baza ale aplicatiei.",
+    "status": "In Executie",
+    "internalBudget": 1500.5,
+    "externalBudget": 3000.0,
+    "module": "AuthService",
+    "partnerCode": "P001",
+    "partnerName": "TechPartners SRL",
+    "reporter": "Ion Popescu",
+    "screener": "Maria Ionescu",
+    "assignedUser": "Andrei Georgescu",
+    "attachmentList": [
+      {
+        "filename": "error_screenshot.png",
+        "fileSize": 2048
+      },
+      {
+        "filename": "logs.txt",
+        "fileSize": 4096
+      }
+    ],
+    "commentList": [
+      {
+        "order": 1,
+        "type": "Intern",
+        "author": "Maria Ionescu",
+        "content": "Am verificat logurile aplicatiei si se observa o eroare recurenta la nivel de API. Pare ca serviciul de autentificare externa nu raspunde corect la cereri. Se impune o analiza suplimentara a configuratiilor serverului de productie.",
+        "date": "2025-08-21T11:00:00"
+      },
+      {
+        "order": 2,
+        "type": "Extern",
+        "author": "Ion Popescu",
+        "content": "Clientii ne contacteaza constant cu privire la imposibilitatea de a intra in conturi. Este foarte important sa primim un update privind progresul cat mai rapid, deoarece situatia creeaza disconfort major si riscam pierderea utilizatorilor activi.",
+        "date": "2025-08-21T11:15:00"
+      }
+    ]
+  },
+  {
+    "code": 1002,
+    "creationDate": "2025-08-20T16:45:00",
+    "severity": "MEDIE",
+    "summary": "Performanta scazuta in modulul de raportare",
+    "description": "Rapoartele generate prin modulul ReportingEngine dureaza mai mult de doua minute sa fie afisate, ceea ce afecteaza fluxul de lucru al utilizatorilor. Testele interne au aratat ca anumite query-uri nu folosesc indecsii disponibili si consuma resurse mari de memorie. Problema nu blocheaza aplicatia, dar reduce considerabil productivitatea si poate afecta experienta generala a clientilor.",
+    "status": "Spre Validare",
+    "internalBudget": 800.0,
+    "externalBudget": 1200.75,
+    "module": "ReportingEngine",
+    "partnerCode": "P002",
+    "partnerName": "DataSolutions SA",
+    "reporter": "Elena Tudor",
+    "screener": "Mihai Enache",
+    "assignedUser": "Cristina Vasilescu",
+    "attachmentList": [
+      {
+        "filename": "report_delay.mp4",
+        "fileSize": 1048576
+      }
+    ],
+    "commentList": [
+      {
+        "order": 1,
+        "type": "Intern",
+        "author": "Mihai Enache",
+        "content": "Am analizat codul SQL si am descoperit ca lipseste un index important pentru tabelul de tranzactii. Am creat indexul in mediul de testare si timpii de raspuns s-au redus la sub 30 secunde. Urmeaza validarea in productie pentru a confirma ca solutia este stabila.",
+        "date": "2025-08-21T09:30:00"
+      }
+    ]
+  },
+  {
+    "code": 1003,
+    "creationDate": "2025-08-19T14:20:00",
+    "severity": "SCAZUTA",
+    "summary": "Mesaj de avertizare incorect",
+    "description": "La salvarea unui document apare un mesaj de avertizare care informeaza incorect utilizatorul ca documentul nu a fost salvat, desi in realitate salvarea s-a realizat cu succes. Aceasta problema nu afecteaza functionalitatea, dar poate induce in eroare utilizatorii mai putin experimentati si poate genera confuzii inutile in procesele zilnice.",
+    "status": "Nealocat",
+    "internalBudget": 200.0,
+    "externalBudget": 0.0,
+    "module": "DocumentService",
+    "partnerCode": "P003",
+    "partnerName": "SoftVision SRL",
+    "reporter": "George Marin",
+    "screener": "Ioana Stan",
+    "assignedUser": "",
+    "attachmentList": [],
+    "commentList": [
+      {
+        "order": 1,
+        "type": "Extern",
+        "author": "George Marin",
+        "content": "Chiar daca nu este o problema blocanta, utilizatorii finali au raportat confuzie si au incercat sa reintroduca documentele de mai multe ori, ceea ce duce la duplicate si pierdere de timp. Se recomanda corectarea mesajului cat mai curand.",
+        "date": "2025-08-19T14:30:00"
+      }
+    ]
+  },
+  {
+    "code": 1004,
+    "creationDate": "2025-08-18T09:10:00",
+    "severity": "CRITICA",
+    "summary": "Serviciul de plati nu functioneaza",
+    "description": "Platile online sunt blocate complet pentru toti utilizatorii. In momentul in care clientii incearca sa finalizeze o tranzactie, conexiunea catre banca partenera esueaza. Impactul este major deoarece niciun client nu isi poate finaliza comenzile. Aceasta situatie are consecinte directe asupra veniturilor si trebuie rezolvata imediat.",
+    "status": "Aprobare Executie",
+    "internalBudget": 5000.0,
+    "externalBudget": 7500.0,
+    "module": "PaymentGateway",
+    "partnerCode": "P004",
+    "partnerName": "PayNet SA",
+    "reporter": "Laura Dobre",
+    "screener": "Alexandru Pavel",
+    "assignedUser": "Daniel Radu",
+    "attachmentList": [
+      {
+        "filename": "payment_error.log",
+        "fileSize": 8192
+      }
+    ],
+    "commentList": [
+      {
+        "order": 1,
+        "type": "Intern",
+        "author": "Alexandru Pavel",
+        "content": "Problema este critica si necesita aprobare pentru a initia procedurile de interventie de urgenta. Trebuie contactat partenerul bancar pentru a confirma disponibilitatea serviciului si a identifica posibilele puncte de esec la nivel de comunicatie.",
+        "date": "2025-08-18T09:30:00"
+      },
+      {
+        "order": 2,
+        "type": "Extern",
+        "author": "Laura Dobre",
+        "content": "Situatia este blocanta pentru clienti si deja au aparut reclamatii. Cerem rezolvarea imediata sau macar o solutie temporara pentru procesarea manuala a platilor.",
+        "date": "2025-08-18T10:00:00"
+      }
+    ]
+  },
+  {
+    "code": 1005,
+    "creationDate": "2025-08-17T08:00:00",
+    "severity": "RIDICATA",
+    "summary": "Consum mare de memorie pe server",
+    "description": "Procesul principal al aplicatiei consuma cantitati excesive de memorie RAM, ajungand la peste 80% din capacitatea disponibila a serverului. Aceasta situatie determina incetinirea tuturor functionalitatilor si poate cauza opriri neasteptate ale serviciului. Investigatiile initiale sugereaza posibile memory leaks in modulul CoreService.",
+    "status": "In Executie",
+    "internalBudget": 1200.0,
+    "externalBudget": 2500.0,
+    "module": "CoreService",
+    "partnerCode": "P005",
+    "partnerName": "InfraTech SRL",
+    "reporter": "Paul Iliescu",
+    "screener": "Carmen Balan",
+    "assignedUser": "Victor Matei",
+    "attachmentList": [
+      {
+        "filename": "memory_profile.json",
+        "fileSizefileSize": 16384
+      }
+    ],
+    "commentList": [
+      {
+        "order": 1,
+        "type": "Intern",
+        "author": "Carmen Balan",
+        "content": "Am rulat profiler-ul pe mediul de test si am identificat mai multe functii care nu elibereaza corect resursele dupa utilizare. In prezent investigam solutii de optimizare a codului pentru a preveni cresterea continua a consumului de memorie.",
+        "date": "2025-08-17T08:30:00"
+      }
+    ]
+  }
+]

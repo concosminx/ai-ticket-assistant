@@ -31,12 +31,20 @@ ext {
 dependencies {
 	compileOnly 'org.projectlombok:lombok'
   	annotationProcessor 'org.projectlombok:lombok'
+
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.ai:spring-ai-advisors-vector-store'
+
+	/* Model dependencies */
 	implementation 'org.springframework.ai:spring-ai-starter-model-ollama'
+	implementation 'org.springframework.ai:spring-ai-starter-model-openai'
+
+	/* Vector Store dependencies */
+	implementation 'org.springframework.ai:spring-ai-advisors-vector-store'
 	implementation 'org.springframework.ai:spring-ai-starter-vector-store-chroma'
+
 	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
